@@ -1,0 +1,16 @@
+diff --git a/src/cli.zig b/src/cli.zig
+index 3a00c082a..0797f0828 100644
+--- a/src/cli.zig
++++ b/src/cli.zig
+@@ -1352,9 +1352,9 @@ pub const Command = struct {
+             },
+             .InstallCommand => {
+                 if (comptime bun.fast_debug_build_mode and bun.fast_debug_build_cmd != .InstallCommand) unreachable;
+-                const ctx = try Command.Context.create(allocator, log, .InstallCommand);
++                // const ctx = try Command.Context.create(allocator, log, .InstallCommand);
+ 
+-                try InstallCommand.exec(ctx);
++                // try InstallCommand.exec(ctx);
+                 return;
+             },
+             .AddCommand => {
